@@ -10,7 +10,6 @@ import ProjectSection from "@/sections/ProjectSection";
 import ContactSection from "@/sections/ContactSection";
 import Footer from "@/components/Footer";
 
-import { getAllPosts } from "utils/api";
 
 
 interface Props {
@@ -49,22 +48,5 @@ const Home: NextPage<Props> = ({ blogPosts }) => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async () => {
-  const blogPosts = getAllPosts([
-    "coverImage",
-    "coverImageAlt",
-    "slug",
-    "title",
-    "excerpt",
-    "datetime",
-    "featured",
-  ]);
-
-  return {
-    props: {
-      blogPosts,
-    },
-  };
-};
 
 export default Home;
