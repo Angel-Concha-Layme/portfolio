@@ -12,6 +12,8 @@ import useScrollActive from "hooks/useScrollActive";
 import fakestoreApi from "public/projects/fakestore-api.webp";
 import teamcode from "public/projects/teamcode-runner.webp";
 import haddopSearch from "public/projects/hadoop-search.webp";
+import noteBoard from "public/projects/noteboard.webp";
+
 
 const ProjectSection: React.FC = () => {
   const { theme } = useTheme();
@@ -118,6 +120,25 @@ const projects = [
     codeUrl: "https://github.com/Angel-Concha-Layme/hadoop-search-engine",
     bgColor: "bg-[#B4BEE0]",
   },
+  {
+    title: "NoteBoard",
+    type: "Full Stack",
+    image: (
+      <Image
+        src={noteBoard}
+        sizes="100vw"
+        fill
+        alt="NoteBoard Challenge"
+        className="transition-transform duration-500 hover:scale-110 object-cover"
+      />
+    ),
+    desc: "The NoteBoard Challenge is a versatile and user-friendly application for managing notes. The first phase allows users to create, edit, delete, archive, and unarchive notes, as well as list active and archived notes. The second phase introduces the ability to add or remove categories from notes and filter them by category. The backend is developed using Spring Boot, Spring Data JPA, Flyway, Lombok, and MySQL, and is deployed on Google Cloud Platform. The frontend, crafted with Vue.js, Vite, and Node.js, offers a smooth and responsive user experience, deployed using Vercel.",
+    tags: ["Spring Boot", "Spring Data JPA", "Flyway", "Lombok", "MySQL", "Java", "Vue.js", "Vite", "Node.js", "Google Cloud Platform", "Vercel"],
+    liveUrl: "https://noteboard-frontend.vercel.app/",
+    codeUrl: "https://github.com/Angel-Concha-Layme/Noteboard",
+    bgColor: "bg-[#B4BEE0]",
+  }
+  
 ];
 
 export default ProjectSection;
