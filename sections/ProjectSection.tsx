@@ -12,6 +12,7 @@ import fakestoreApi from "public/projects/fakestore-api.webp";
 import teamcode from "public/projects/teamcode-runner.webp";
 import haddopSearch from "public/projects/hadoop-search.webp";
 import noteBoard from "public/projects/noteboard.webp";
+import clinicalMind from "public/projects/clinicalmind.webp";
 
 const ProjectSection: React.FC = () => {
   const { theme } = useTheme();
@@ -172,6 +173,34 @@ const projects = [
     ],
     liveUrl: "https://noteboard-frontend.vercel.app/",
     codeUrl: "https://github.com/Angel-Concha-Layme/Noteboard",
+    bgColor: "bg-[#B4BEE0]",
+  },
+  {
+    title: "ClinicalMind App Design",
+    type: "Ux Design",
+    image: (
+      <Image
+        src={clinicalMind}
+        sizes="100vw"
+        fill
+        alt="NoteBoard Challenge"
+        className="transition-transform duration-500 hover:scale-110 object-cover"
+      />
+    ),
+    desc: "The ClinicalMind app is a mobile tool that allows patients to easily and quickly schedule medical appointments, access their medical prescriptions, and stay informed about their treatment. The app focuses on providing an intuitive and enjoyable user experience, with a clear and user-friendly interface. With ClinicalMind, patients can manage their healthcare comfortably and securely anytime, anywhere.",
+    tags: [
+      "Figma",
+      "User Experience",
+      "User Interface",
+      "Mobile App",
+      "Design",
+      "Prototyping",
+      "Wireframing",
+      "Usability Testing",
+      "User Research",
+    ],
+    liveUrl: "https://www.figma.com/proto/nuKOP7cObNRW0eXFQdqxeH/Hi-Fi-ClinicalMind?page-id=0%3A1&node-id=1-57&viewport=942%2C376%2C0.1&scaling=min-zoom&starting-point-node-id=1%3A57",
+    codeUrl: "https://docs.google.com/presentation/d/176isY8T-hZZwMgFsUq7gpxw5i0-u3cSQbSIk7rl4cWY/edit?usp=sharing",
     bgColor: "bg-[#B4BEE0]",
   },
 ];
