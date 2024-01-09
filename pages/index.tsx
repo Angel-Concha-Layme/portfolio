@@ -1,4 +1,4 @@
-import type { GetStaticProps, NextPage } from "next";
+import type {NextPage } from "next";
 
 import Loader from "@/components/Loader";
 import SkipToMain from "@/components/SkipToMain";
@@ -10,12 +10,6 @@ import ProjectSection from "@/sections/ProjectSection";
 import ContactSection from "@/sections/ContactSection";
 import Footer from "@/components/Footer";
 
-
-
-interface Props {
-  blogPosts: any;
-}
-
 export const meta = {
   description:
     "Angel Tomas Concha Layme is a full-stack developer from Arequipa - Peru. He is passionate about writing code and developing web applications to solve real-life challenges.",
@@ -26,7 +20,7 @@ export const meta = {
   imageAlt: "Angel Concha portfolio website",
 };
 
-const Home: NextPage<Props> = ({ blogPosts }) => {
+const Home: NextPage = () => {
   return (
     <>
       <Loader>TomasLive.dev</Loader>
@@ -47,6 +41,5 @@ const Home: NextPage<Props> = ({ blogPosts }) => {
     </>
   );
 };
-
 
 export default Home;
