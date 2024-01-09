@@ -3,9 +3,6 @@ import type { NextPage } from "next";
 import Footer from "@/components/Footer";
 import LinkButton from "@/components/LinkButton";
 
-import { meta } from "pages";
-import Link from "next/link";
-
 const Home: NextPage = () => {
   return (
     <>
