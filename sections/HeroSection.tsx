@@ -2,9 +2,7 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
 import LinkButton from "../components/LinkButton";
-
 import dev from "../public/dev-illustration.webp";
 import laptop from "../public/laptop-illustration.webp";
 
@@ -80,19 +78,22 @@ const HeroSection: React.FC = () => {
         ease: "power1.easeInOut",
       });
   }, [q]);
-
   return (
+    <div
+      ref ={sectionRef}
+      className= "hero-panel  bg-white dark:bg-[#1B2731] relative"
+    >
     <section
-      ref={sectionRef}
+      id="welcome"
+
       className="relative mt-16 sm:mt-8 pt-8 lg:pt-0 px-4 sm:px-8 md:px-20 max-w-5xl sm:pb-24 min-h-[769px] mx-auto sm:flex sm:flex-col sm:justify-center sm:items-center lg:flex-row-reverse"
     >
       <span
         aria-hidden="true"
         className="bg-text absolute -top-36 rotate-12 text-gray-100 dark:text-[#1f2e3a] text-9xl scale-150 tracking-wide font-bold select-none pointer-events-none text-center z-0"
       >
-        {
-          //PASSIONATE PROGRAMMER FREELANCER FULL-STACK DEVELOPER
-        }
+          PASSIONATE PROGRAMMER FULL-STACK DEVELOPER
+        
       </span>
 
       <div className="image-animation z-10 select-none mt-0 xs:mt-6 sm:mt-14 lg:mt-0 px-0 mx-auto lg:p-0 lg:basis-1/3">
@@ -172,6 +173,7 @@ const HeroSection: React.FC = () => {
         </svg>
       </a>
     </section>
+    </div>
   );
 };
 
