@@ -1,4 +1,4 @@
-import type {NextPage } from "next";
+import type { NextPage } from "next";
 
 import Loader from "@/components/Loader";
 import SkipToMain from "@/components/SkipToMain";
@@ -9,6 +9,7 @@ import AboutSection from "@/sections/AboutSection";
 import ProjectSection from "@/sections/ProjectSection";
 import ContactSection from "@/sections/ContactSection";
 import Footer from "@/components/Footer";
+import AppHead from "@/components/AppHead";
 
 export const meta = {
   description:
@@ -23,6 +24,11 @@ export const meta = {
 const Home: NextPage = () => {
   return (
     <>
+      <AppHead
+        title="Angel Concha | Full-stack Developer"
+        url={`${process.env.NEXT_PUBLIC_URL}`}
+        meta={meta}
+      />
       <Loader>TomasLive.dev</Loader>
       <div className="bg-bglight dark:bg-bgdark overflow-hidden">
         <div className="selection:bg-marrsgreen selection:text-bglight dark:selection:bg-carrigreen dark:selection:text-bgdark">
