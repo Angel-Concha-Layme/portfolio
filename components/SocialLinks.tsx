@@ -93,7 +93,7 @@ const socialLinks = [
 
 const navLinks = [
   {
-    url: "#",
+    url: "#welcome",
     text: "Welcome",
   },
   {
