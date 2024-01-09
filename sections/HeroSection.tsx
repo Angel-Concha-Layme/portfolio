@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 import LinkButton from "../components/LinkButton";
 
-import satNaing from "../public/satnaing-illustration.webp";
+import dev from "../public/dev-illustration.webp";
 import laptop from "../public/laptop-illustration.webp";
 
 const HeroSection: React.FC = () => {
@@ -99,7 +99,7 @@ const HeroSection: React.FC = () => {
         <div className="relative w-72 md:w-80 h-80 flex items-center mx-auto">
           <div className="absolute pointer-events-none scale-90 xs:scale-95 mx-auto">
             <Image
-              src={satNaing}
+              src={dev}
               width={1177}
               height={1374}
               priority
