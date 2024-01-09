@@ -11,9 +11,8 @@ const ContactSection: React.FC = () => {
   const { theme } = useTheme();
 
   const sectionRef = useRef<HTMLDivElement>(null);
-  const isSecOnScreen = useOnScreen(sectionRef);
-
   const elementRef = useRef<HTMLDivElement>(null);
+
   const isOnScreen = useOnScreen(elementRef);
 
   // Set active link for contact section
@@ -21,13 +20,17 @@ const ContactSection: React.FC = () => {
   const { onSectionChange } = useSection();
   useEffect(() => {
     contactSection && onSectionChange!("contact");
-  }, [contactSection]);
+  }, [contactSection, onSectionChange]);
 
   return (
+    <div
+    ref={sectionRef}
+    className="contact-panel bg-white dark:bg-[#1B2731] relative"
+  >
     <section
       ref={sectionRef}
       id="contact"
-      className="section min-h-[700px] text-center"
+      className="section text-center"
     >
       <div className="text-center">
         <RoughNotation
@@ -37,7 +40,7 @@ const ContactSection: React.FC = () => {
           order={1}
           show={isOnScreen}
         >
-          <h2 className="text-2xl inline-block my-6 font-medium">Contact</h2>
+          <h2 className="section-heading">Contact</h2>
         </RoughNotation>
       </div>
       <div className="mt-8 mb-20">
@@ -54,6 +57,7 @@ const ContactSection: React.FC = () => {
         </LinkButton>
       </div>
     </section>
+    </div>
   );
 };
 
