@@ -10,13 +10,10 @@ import useOnScreen from "hooks/useOnScreen";
 import useScrollActive from "hooks/useScrollActive";
 
 import angelTomas from "../public/angeltomas.webp";
-import AboutBgSvg from "@/components/AboutBgSvg";
 import EduGroup from "@/components/EduGroup";
 
 const AboutSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const isSecOnScreen = useOnScreen(sectionRef);
-
   const q = gsap.utils.selector(sectionRef);
 
   useEffect(() => {
@@ -88,9 +85,13 @@ const AboutSection: React.FC = () => {
     );
   }, []);
 
-  const { theme } = useTheme();
+
+  
+  const {theme} = useTheme();
 
   const eduRef = useRef<HTMLDivElement>(null);
+
+  const isSecOnScreen = useOnScreen(sectionRef);
 
   // Set active link for about section
   const aboutSection = useScrollActive(sectionRef);
@@ -102,7 +103,9 @@ const AboutSection: React.FC = () => {
   return (
     <div
       ref={sectionRef}
-      className="about-panel bg-white dark:bg-[#1B2731] relative"
+      className="about-panel bg-white dark:bg-[#1B2731] relative
+      "
+
     >
       <section id="whoami" className="section">
         <RoughNotationGroup>
@@ -117,6 +120,7 @@ const AboutSection: React.FC = () => {
               show={isSecOnScreen}
             >
               <h2 className="section-heading">Who am I?</h2>
+
             </RoughNotation>
           </div>
           <div className="md:grid grid-rows-5 lg:grid-rows-6 grid-cols-5">
@@ -136,8 +140,8 @@ const AboutSection: React.FC = () => {
                 <div className="profile-picture overflow-hidden md:overflow-visible rounded-md md:shadow-2xl">
                   <Image
                     src={angelTomas}
-                    width={1700}
-                    height={1790}
+                    width={5000}
+                    height={5000}
                     priority
                     alt="Angel Tomas Concha Layme profile picture"
                     className="rounded-md"
@@ -170,9 +174,10 @@ const AboutSection: React.FC = () => {
             </div>
           </div>
         </RoughNotationGroup>
+        <br />
+        <br />
       </section>
 
-      <AboutBgSvg />
     </div>
   );
 };
