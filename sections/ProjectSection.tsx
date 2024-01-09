@@ -71,7 +71,7 @@ const ProjectSection: React.FC = () => {
 
 const projects = [
   {
-    title: "Fake Store API",
+    title: "Fake Store API - Enhanced Version",
     type: "Backend",
     image: (
       <Image
@@ -82,7 +82,7 @@ const projects = [
         className="transition-transform duration-500 hover:scale-110 object-cover"
       />
     ),
-    desc: "Fake Store API is a service that offers CRUD operations, authentication using JWT, and advanced features such as filtering and pagination. This API is developed using Spring Boot, MySQL, Spring Security, and Spring Data JPA. The frontend is built with Astro. The entire system is deployed on Google Cloud.",
+    desc: "Fake Store API is an advanced evolution of the 'Platzi Fake Store API, expanding and improving upon its original functionalities. This service offers CRUD operations, JWT authentication, and advanced features like filtering and pagination, all developed using Spring Boot, MySQL, Spring Security, and Spring Data JPA. Unlike the original project, this version features an extended database and a more sophisticated order processing system with enhanced authentication and authorization. The frontend, like in the Platzi version, is built with Starlight Astro, ensuring a modern and efficient user interface. The entire system is deployed on Google Cloud, ensuring greater scalability and performance.",
     tags: [
       "Java",
       "Spring Boot",
