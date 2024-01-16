@@ -1,10 +1,13 @@
 import { useEffect, useRef } from "react";
 import { Analytics } from '@vercel/analytics/react';
-import Head from "next/head";
+
 import type { AppProps } from "next/app";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { ThemeProvider } from "next-themes";
 import { ProvideFilter } from "context/filter";
 import { ProvideSection } from "context/section";
+
+import Head from "next/head";
 
 import "../styles/globals.css";
 
@@ -50,6 +53,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <ProvideFilter>
           <ProvideSection>
             <Component {...pageProps} />
+            <SpeedInsights />
           </ProvideSection>
         </ProvideFilter>
         <Analytics /> 
