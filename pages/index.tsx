@@ -10,7 +10,10 @@ import ProjectSection from "@/sections/ProjectSection";
 import ContactSection from "@/sections/ContactSection";
 import Footer from "@/components/Footer";
 import AppHead from "@/components/AppHead";
+import useTranslation from "next-translate/useTranslation";
 
+
+/*
 export const meta = {
   description:
     "Angel Tomas Concha Layme is a full-stack developer from Arequipa - Peru. He is passionate about writing code and developing web applications to solve real-life challenges.",
@@ -20,12 +23,22 @@ export const meta = {
   siteName: "Angel Concha",
   imageAlt: "Angel Concha portfolio website",
 };
-
+*/
 const Home: NextPage = () => {
+  const { t } = useTranslation('common');
+  const meta = {
+    description: t('meta.description'),
+    author: t('meta.author'),
+    type: t('meta.type'),
+    ogImage: `${process.env.NEXT_PUBLIC_URL}/angeltomas-dev-og-new.png`,
+    siteName: t('meta.siteName'),
+    imageAlt: t('meta.ogImageAlt'),
+    title: t('meta.title')
+  };
   return (
     <>
       <AppHead
-        title="Angel Tomas Concha Layme | Full-stack Developer"
+        title={meta.title}
         url={`${process.env.NEXT_PUBLIC_URL}`}
         meta={meta}
       />
