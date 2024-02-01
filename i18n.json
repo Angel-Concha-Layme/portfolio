@@ -1,0 +1,8 @@
+{
+    "locales": ["en", "es"],
+    "defaultLocale": "en",
+    "pages": {
+      "*": ["common", "about", "hero", "footer", "header", "contact","projects"]
+    }
+  }
+  
