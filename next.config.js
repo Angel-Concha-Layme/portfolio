@@ -1,7 +1,11 @@
-/** @type {import('next').NextConfig} */
+const nextTranslate = require('next-translate-plugin');
 
-module.exports = {
-  // Append the default value with md extensions
+
+module.exports = nextTranslate({
+  i18n: {
+    locales: ["en", "es"], // Define los idiomas disponibles
+    defaultLocale: "en", // Define el idioma por defecto
+  },
   pageExtensions: ["ts", "tsx", "js", "jsx", "html"],
   reactStrictMode: true,
   trailingSlash: false,
@@ -11,10 +15,5 @@ module.exports = {
   compiler: {
     removeConsole: true,
   },
-};
+});
 
-// const nextConfig = {
-//   reactStrictMode: true,
-// }
-
-// module.exports = nextConfig
