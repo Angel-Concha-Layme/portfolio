@@ -1,0 +1,15 @@
+{
+    "navWelcome": "Bienvenido",
+    "navWhoAmI": "¿Quién soy?",
+    "navProjects": "Proyectos",
+    "navContact": "Contacto",
+    "meta": {
+      "description": "Angel Tomas Concha Layme es un desarrollador Full-Stack de Arequipa - Perú. Apasionado por escribir código y desarrollar aplicaciones web para resolver desafíos de la vida real.",
+      "author": "Angel Tomas Concha Layme",
+      "type": "website",
+      "ogImageAlt": "Sitio web del portafolio de Angel Tomas Concha Layme",
+      "siteName": "Angel Concha",
+      "title": "Angel Tomas Concha Layme | Desarrollador Full-Stack"
+    },
+    "loader": "AngelTomas.dev"
+  }

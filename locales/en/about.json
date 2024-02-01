@@ -1,0 +1,32 @@
+{
+    "whoAmI": "Who am I?",
+    "myEducation": "Here is my educational background.",
+    "educationInfo": [
+      {
+        "title": "Bachelor of Science in Computer Science",
+        "subTitle": "National University of San Agustín | January 2018 ~ December 2023",
+        "list": []
+      },
+      {
+        "title": "Oracle Next Education Backend Program",
+        "subTitle": "Oracle Next Education | June 2023 ~ October 2023",
+        "list": []
+      },
+      {
+        "title": "Google User Experience (UX) Design Professional Certification",
+        "subTitle": "Google Career Certificates | January 2023 ~ April 2023",
+        "list": []
+      },
+      {
+        "title": "Specialized Program: Deep Learning",
+        "subTitle": "DeepLearning.AI | August 2023 ~ December 2023",
+        "list": []
+      },
+      {
+        "title": "Meta Front-End Developer professional certificate",
+        "subTitle": "Taught by Meta Staff | November 2023 ~ February 2024",
+        "list": []
+      }
+    ]
+  }
+  

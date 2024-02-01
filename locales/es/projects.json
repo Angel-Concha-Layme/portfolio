@@ -1,0 +1,107 @@
+{
+    "sectionTitle": "Proyectos Destacados",
+    "sectionDesc": "Aquí algunos de mis proyectos que no te deberías perder",
+    "sectionDesc2": "Puede explorar otros proyectos en",
+    "githubProfile": "mi perfil de GitHub",
+    "projects": [
+      {
+        "title": "Fake Store API - Versión Mejorada",
+        "type": "Backend",
+        "imageId": "fakestoreApi",
+        "desc": "Fake Store API es una evolución avanzada de la 'Platzi Fake Store API', expandiendo y mejorando sus funcionalidades originales. Este servicio ofrece operaciones CRUD, autenticación JWT y características avanzadas como filtrado y paginación, todo desarrollado usando Spring Boot, MySQL, Spring Security y Spring Data JPA. A diferencia del proyecto original, esta versión cuenta con una base de datos extendida y un sistema de procesamiento de pedidos más sofisticado con autenticación y autorización mejoradas. El frontend, al igual que en la versión de Platzi, está construido con Starlight Astro, asegurando una interfaz de usuario moderna y eficiente. Todo el sistema está desplegado en Google Cloud, asegurando mayor escalabilidad y rendimiento.",
+        "tags": [
+          "Java",
+          "Spring Boot",
+          "Spring Security",
+          "Spring Data JPA",
+          "MySQL",
+          "Plataforma de Google Cloud",
+          "Postman",
+          "Swagger"
+        ],
+        "liveUrl": "https://fake-store-api-docs.vercel.app/",
+        "codeUrl": "https://github.com/Angel-Concha-Layme/Fake-Store-API",
+        "bgColor": "bg-[#B4BEE0]"
+      },
+      {
+        "title": "Team Code Runner",
+        "type": "Backend y Frontend",
+        "imageId": "teamcode",
+        "desc": "Plataforma web para la ejecución de código en múltiples lenguajes (Java, Python, JavaScript), utilizando una arquitectura de microservicios. Cada servicio específico del lenguaje está construido usando Express para JavaScript, Flask para Python y Spring Boot para Java, orquestados por un servicio principal de Spring Boot. El frontend se desarrolló con Vue.js e incorpora Ace Editor para resaltado de sintaxis y autocompletado. Toda la aplicación está desplegada en Plataforma de Google Cloud.",
+        "tags": [
+          "Java",
+          "Python",
+          "JavaScript",
+          "Spring Boot",
+          "Flask",
+          "Express",
+          "Vue.js",
+          "Ace Editor",
+          "Microservicios",
+          "Plataforma de Google Cloud"
+        ],
+        "liveUrl": "https://angel-concha-layme.github.io/FrontSampleTeamCode/",
+        "codeUrl": "https://github.com/Angel-Concha-Layme/FrontSampleTeamCode",
+        "bgColor": "bg-[#B4BEE0]"
+      },
+      {
+        "title": "Motor de Búsqueda Hadoop",
+        "type": "Backend",
+        "imageId": "haddopSearch",
+        "desc": "Motor de Búsqueda Hadoop es un proyecto que desarrolla un motor de búsqueda basado en Hadoop, enfocado en la indexación eficiente y la búsqueda dentro de grandes conjuntos de datos. Utilizando un conjunto de datos de 10 GB de libros de dominio público del Proyecto Gutenberg, se construye un índice invertido con Hadoop, que luego se almacena en una base de datos relacional. La interfaz, implementada con Java Swing, facilita la búsqueda de palabras específicas, mostrando los resultados según su relevancia, determinada por un algoritmo de PageRank adaptado que aprovecha una matriz de co-ocurrencia de palabras entre los libros. Este enfoque demuestra la aplicación práctica de técnicas distribuidas para la gestión efectiva de grandes volúmenes de información.",
+        "tags": [
+          "Java",
+          "Hadoop",
+          "MapReduce",
+          "PageRank",
+          "MySQL",
+          "Java Swing"
+        ],
+        "liveUrl": "https://github.com/Angel-Concha-Layme/hadoop-search-engine",
+        "codeUrl": "https://github.com/Angel-Concha-Layme/hadoop-search-engine",
+        "bgColor": "bg-[#B4BEE0]"
+      },
+      {
+        "title": "NoteBoard",
+        "type": "Full Stack",
+        "imageId": "noteBoard",
+        "desc": "El Desafío NoteBoard es una aplicación versátil y fácil de usar para la gestión de notas. La primera fase permite a los usuarios crear, editar, eliminar, archivar y desarchivar notas, así como listar notas activas y archivadas. La segunda fase introduce la capacidad de añadir o eliminar categorías de las notas y filtrarlas por categoría. El backend está desarrollado usando Spring Boot, Spring Data JPA, Flyway, Lombok y MySQL, y está desplegado en Plataforma de Google Cloud. El frontend, elaborado con Vue.js, Vite y Node.js, ofrece una experiencia de usuario suave y receptiva, desplegado usando Vercel.",
+        "tags": [
+          "Spring Boot",
+          "Spring Data JPA",
+          "Flyway",
+          "Lombok",
+          "MySQL",
+          "Java",
+          "Vue.js",
+          "Vite",
+          "Node.js",
+          "Plataforma de Google Cloud",
+          "Vercel"
+        ],
+        "liveUrl": "https://noteboard-frontend.vercel.app/",
+        "codeUrl": "https://github.com/Angel-Concha-Layme/Noteboard",
+        "bgColor": "bg-[#B4BEE0]"
+      },
+      {
+        "title": "Diseño de App ClinicalMind",
+        "type": "Diseño UX",
+        "imageId": "clinicalMind",
+        "desc": "La app ClinicalMind es una herramienta móvil que permite a los pacientes programar citas médicas fácil y rápidamente, acceder a sus prescripciones médicas y mantenerse informados sobre su tratamiento. La app se centra en proporcionar una experiencia de usuario intuitiva y agradable, con una interfaz clara y fácil de usar. Con ClinicalMind, los pacientes pueden gestionar su atención médica cómoda y seguramente en cualquier momento y lugar.",
+        "tags": [
+          "Figma",
+          "Experiencia de Usuario",
+          "Interfaz de Usuario",
+          "App Móvil",
+          "Diseño",
+          "Prototipado",
+          "Wireframing",
+          "Pruebas de Usabilidad",
+          "Investigación de Usuarios"
+        ],
+        "liveUrl": "https://www.figma.com/proto/nuKOP7cObNRW0eXFQdqxeH/Hi-Fi-ClinicalMind?page-id=0%3A1&node-id=1-57&viewport=942%2C376%2C0.1&scaling=min-zoom&starting-point-node-id=1%3A57",
+        "codeUrl": "https://docs.google.com/presentation/d/176isY8T-hZZwMgFsUq7gpxw5i0-u3cSQbSIk7rl4cWY/edit?usp=sharing",
+        "bgColor": "bg-[#B4BEE0]"
+      }
+    ]
+  }

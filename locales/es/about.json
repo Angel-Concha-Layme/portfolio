@@ -1,0 +1,31 @@
+{
+    "whoAmI": "¿Quién soy?",
+    "myEducation": "Aquí está mi formación académica",
+    "educationInfo": [
+      {
+        "title": "Licenciatura en Ciencias de la Computación",
+        "subTitle": "Universidad Nacional de San Agustín | Enero 2018 ~ Diciembre 2023",
+        "list": []
+      },
+      {
+        "title": "Programa de Backend de Oracle Next Education",
+        "subTitle": "Oracle Next Education | Junio 2023 ~ Octubre 2023",
+        "list": []
+      },
+      {
+        "title": "Certificación Profesional de Diseño de Experiencia de Usuario (UX) de Google",
+        "subTitle": "Certificados de Carrera de Google | Enero 2023 ~ Abril 2023",
+        "list": []
+      },
+      {
+        "title": "Programa Especializado: Deep Learning",
+        "subTitle": "DeepLearning.AI | Agosto 2023 ~ Diciembre 2023",
+        "list": []
+      },
+      {
+        "title": "Certificado profesional de desarrollador de front-end de Meta",
+        "subTitle": "Enseñado por el personal de Meta | Noviembre 2023 ~ Febrero 2024",
+        "list": []
+      }
+    ]
+  }
