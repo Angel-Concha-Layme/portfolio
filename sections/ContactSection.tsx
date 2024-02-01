@@ -6,6 +6,8 @@ import LinkButton from "@/components/LinkButton";
 import { useSection } from "context/section";
 import useOnScreen from "hooks/useOnScreen";
 import useScrollActive from "hooks/useScrollActive";
+import useTranslation from "next-translate/useTranslation";
+
 
 const ContactSection: React.FC = () => {
   const { theme } = useTheme();
@@ -21,6 +23,8 @@ const ContactSection: React.FC = () => {
   useEffect(() => {
     contactSection && onSectionChange!("contact");
   }, [contactSection, onSectionChange]);
+
+  const { t } = useTranslation("contact");
 
   return (
     <div
@@ -40,20 +44,20 @@ const ContactSection: React.FC = () => {
           order={1}
           show={isOnScreen}
         >
-          <h2 className="section-heading">Contact</h2>
+          <h2 className="section-heading">
+            {t("title")}
+          </h2>
         </RoughNotation>
       </div>
       <div className="mt-8 mb-20">
         <h3 className="font-medium text-lg mb-2 md:text-3xl" ref={elementRef}>
-          Let's be awesome together!
+          {t("subtitle")}
         </h3>
         <p className="mb-6 mx-auto max-w-lg md:mb-10 lg:leading-loose">
-          As a dev, I am driven by my love for coding and my desire for new
-          challenges. If you have opportunities for collaboration or want to
-          build something amazing, don't hesitate to contact me!
+          {t("description")}
         </p>
         <LinkButton href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
-          Get in touch!
+          {t("buttonText")}
         </LinkButton>
       </div>
     </section>

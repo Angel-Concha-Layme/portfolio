@@ -12,6 +12,8 @@ import useScrollActive from "hooks/useScrollActive";
 import angelTomas from "../public/angeltomas.webp";
 import EduGroup from "@/components/EduGroup";
 
+import useTranslation from "next-translate/useTranslation";
+
 const AboutSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const q = gsap.utils.selector(sectionRef);
@@ -85,9 +87,7 @@ const AboutSection: React.FC = () => {
     );
   }, []);
 
-
-  
-  const {theme} = useTheme();
+  const { theme } = useTheme();
 
   const eduRef = useRef<HTMLDivElement>(null);
 
@@ -100,12 +100,17 @@ const AboutSection: React.FC = () => {
     aboutSection ? onSectionChange!("who am i?") : onSectionChange!("");
   }, [aboutSection, onSectionChange]);
 
+  const { t } = useTranslation("about");
+  // Cargando educationInfo desde el archivo de traducción
+  const educationInfo = t("educationInfo", {}, { returnObjects: true });
+
+  console.log(educationInfo);
+
   return (
     <div
       ref={sectionRef}
       className="about-panel bg-white dark:bg-[#1B2731] relative
       "
-
     >
       <section id="whoami" className="section">
         <RoughNotationGroup>
@@ -119,8 +124,7 @@ const AboutSection: React.FC = () => {
               order={1}
               show={isSecOnScreen}
             >
-              <h2 className="section-heading">Who am I?</h2>
-
+              <h2 className="section-heading">{t("whoAmI")}</h2>
             </RoughNotation>
           </div>
           <div className="md:grid grid-rows-5 lg:grid-rows-6 grid-cols-5">
@@ -158,8 +162,6 @@ const AboutSection: React.FC = () => {
                 >
                   <path d="M13.68 11.51L9.23 7.05998L13.68 2.61C14.24 2.05 14.24 1.12999 13.68 0.569994C13.12 0.00999391 12.2 0.00999391 11.64 0.569994L7.19002 5.02001L2.74001 0.569994C2.18001 0.00999391 1.26003 0.00999391 0.700029 0.569994C0.140029 1.12999 0.140029 2.05 0.700029 2.61L5.15004 7.05998L0.700029 11.51C0.140029 12.07 0.140029 12.99 0.700029 13.55C1.26003 14.11 2.18001 14.11 2.74001 13.55L7.19002 9.09999L11.64 13.55C12.2 14.11 13.12 14.11 13.68 13.55C14.24 12.99 14.24 12.08 13.68 11.51Z" />
                 </svg>
-
-
               </div>
             </div>
 
@@ -167,21 +169,21 @@ const AboutSection: React.FC = () => {
               className="col-start-3 col-end-6 row-start-4 row-end-6 lg:row-start-1 lg:row-end- md:ml-8 place-content-end"
               ref={eduRef}
             >
-              <p className="edu-bg my-4">Here is my educational background.</p>
-              {educationInfo.map((edu) => (
-                <EduGroup edu={edu} key={edu.id} />
-              ))}
+              <p className="edu-bg my-4">{t("myEducation")}</p>
+              {Array.isArray(educationInfo) &&
+                educationInfo.map((edu, index) => (
+                  <EduGroup edu={edu} key={index} />
+                ))}
             </div>
           </div>
         </RoughNotationGroup>
         <br />
         <br />
       </section>
-
     </div>
   );
 };
-
+/*
 const educationInfo = [
   {
     id: 1,
@@ -214,5 +216,5 @@ const educationInfo = [
     list: [],
   }
 ];
-
+*/
 export default AboutSection;

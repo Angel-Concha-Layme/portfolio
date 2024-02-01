@@ -5,9 +5,11 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import LinkButton from "../components/LinkButton";
 import dev from "../public/dev-illustration.webp";
 import laptop from "../public/laptop-illustration.webp";
+import useTranslation from "next-translate/useTranslation";
+
 
 const HeroSection: React.FC = () => {
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
   const q = gsap.utils.selector(sectionRef);
 
   useEffect(() => {
@@ -78,6 +80,11 @@ const HeroSection: React.FC = () => {
         ease: "power1.easeInOut",
       });
   }, [q]);
+
+  const { t } = useTranslation('hero');
+
+  console.log('t', t('hiMyNameIs'));
+
   return (
     <div
       ref={sectionRef}
@@ -91,7 +98,7 @@ const HeroSection: React.FC = () => {
           aria-hidden="true"
           className="bg-text absolute -top-36 rotate-12 text-gray-100 dark:text-[#1f2e3a] text-9xl scale-150 tracking-wide font-bold select-none pointer-events-none text-center z-0"
         >
-          PASSIONATE PROGRAMMER FULL-STACK DEVELOPER
+          {t('passionateProgrammer')}
         </span>
 
         <div className="image-animation z-10 select-none mt-0 xs:mt-6 sm:mt-14 lg:mt-0 px-0 mx-auto lg:p-0 lg:basis-1/3">
@@ -121,38 +128,34 @@ const HeroSection: React.FC = () => {
 
         <div className="lg:basis-2/3 z-10 relative">
           <span className="text-marrsgreen lg:text-lg font-medium dark:text-carrigreen">
-            Hi my name is
+            {t('hiMyNameIs')}
           </span>
           <div className="overflow-hidden">
             <h1 className="text-animation text-4xl md:text-5xl lg:text-7xl md:my-2 font-semibold my-1">
-              Angel Concha
+              {t('fullName')}
             </h1>
           </div>
           <div className="overflow-hidden">
             <span className="text-animation text-2xl md:text-3xl lg:text-5xl block md:my-3 text-marrsgreen dark:text-carrigreen font-medium">
-              A Full-stack Developer
+              {t('fullStackDeveloper')}
             </span>
           </div>
           <div className="mt-2 my-4 md:mb-8">
             <p className="mb-3" >
-              Passion for delivering exceptional results and a dedication to
-              teaching.
+              {t('description1')}
             </p>
 
             <p className="mb-3" >
-              Expertise in React and Next.js on the frontend, and Java with
-              Spring Boot on the backend. I bring a unique combination of
-              technical skills and a commitment to educating others.
+              {t('description2')}  
             </p>
 
             <p className="mb-3" >
-              Focused only on developing top-notch software solutions but also
-              on imparting valuable knowledge, ensuring that every project.
+              {t('description3')}
             </p>
 
           </div>
           <LinkButton href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
-            Contact me!
+            {t('contactMe')}
           </LinkButton>
         </div>
         <a
@@ -160,7 +163,7 @@ const HeroSection: React.FC = () => {
           className="group absolute link-outline animate-bounce hidden md:bottom-14 lg:bottom-16 left-1/2 transform -translate-x-1/2 md:flex items-center flex-col"
         >
           <span className="group-hover:text-marrsgreen dark:group-hover:text-carrigreen">
-            Scroll
+            {t('scroll')}
           </span>
           <svg
             xmlns="http://www.w3.org/2000/svg"

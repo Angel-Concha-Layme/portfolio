@@ -1,4 +1,5 @@
 import Image from "next/image";
+import useTranslation from "next-translate/useTranslation";
 import { useEffect, useRef } from "react";
 import { RoughNotation } from "react-rough-notation";
 import { useTheme } from "next-themes";
@@ -14,20 +15,41 @@ import haddopSearch from "public/projects/hadoop-search.webp";
 import noteBoard from "public/projects/noteboard.webp";
 import clinicalMind from "public/projects/clinicalmind.webp";
 
+
 const ProjectSection: React.FC = () => {
   const { theme } = useTheme();
-
   const sectionRef = useRef<HTMLDivElement>(null);
   const elementRef = useRef<HTMLDivElement>(null);
-
   const isOnScreen = useOnScreen(elementRef);
 
-  // Set active link for project section
+
   const projectSection = useScrollActive(sectionRef);
   const { onSectionChange } = useSection();
   useEffect(() => {
     projectSection && onSectionChange!("projects");
   }, [projectSection, onSectionChange]);
+
+  const { t } = useTranslation('projects');
+  const translatedProjects = t('projects', {}, { returnObjects: true });
+
+
+  type ImageKey = 'fakestoreApi' | 'teamcode' | 'haddopSearch' | 'noteBoard' | 'clinicalMind';
+
+  const getImageComponent = (imageId: ImageKey) => {
+    const imageMap = {
+      fakestoreApi,
+      teamcode,
+      haddopSearch,
+      noteBoard,
+      clinicalMind,
+    };
+  
+    const ImageComponent = imageMap[imageId] ? (
+      <Image src={imageMap[imageId]} alt={imageId} layout="fill" objectFit="cover" />
+    ) : null;
+  
+    return ImageComponent;
+  };
 
   return (
     <div
@@ -43,24 +65,34 @@ const ProjectSection: React.FC = () => {
           order={1}
           show={isOnScreen}
         >
-          <h2 className="section-heading">Featured Projects</h2>
+          <h2 className="section-heading">
+            {t('sectionTitle')}
+          </h2>
         </RoughNotation>
       </div>
       <span className="project-desc text-center block mb-4" ref={elementRef}>
-        Here are some of my projects you shouldn't misss
+        {t('sectionDesc')}
       </span>
       <div className="flex flex-wrap">
-        {projects.map((project, index) => (
-          <ProjectCard key={project.title} index={index} project={project} />
+        
+        {Array.isArray(translatedProjects) && translatedProjects.map((project, index) => (
+          <ProjectCard
+          key={project.title}
+          index={index}
+          project={{
+            ...project,
+            image: getImageComponent(project.imageId), // Asume que tienes un campo `imageId`
+          }}
+        />
         ))}
       </div>
       <div className="others text-center mb-16">
-        Other projects can be explored in{" "}
+        {t('sectionDesc2')} {" "}
         <a
           href="https://github.com/Angel-Concha-Layme"
           className="font-medium underline link-outline text-marrsgreen dark:text-carrigreen whitespace-nowrap"
         >
-          my github profile
+          {t('githubProfile')}
         </a>
       </div>
     </section>
@@ -69,6 +101,7 @@ const ProjectSection: React.FC = () => {
   
 };
 
+/*
 const projects = [
   {
     title: "Fake Store API - Enhanced Version",
@@ -204,5 +237,5 @@ const projects = [
     bgColor: "bg-[#B4BEE0]",
   },
 ];
-
+*/
 export default ProjectSection;
