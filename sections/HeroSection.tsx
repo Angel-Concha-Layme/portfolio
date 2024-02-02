@@ -4,9 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import LinkButton from "../components/LinkButton";
 import dev from "../public/dev-illustration.webp";
-import laptop from "../public/laptop-illustration.webp";
 import useTranslation from "next-translate/useTranslation";
-
 
 const HeroSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -53,32 +51,6 @@ const HeroSection: React.FC = () => {
         rotation: "+=2",
         ease: "power1.easeInOut",
       });
-
-    // laptop floating effect
-    let laptopTl = gsap.timeline({ repeat: -1 });
-    laptopTl
-      .to(q(".laptop"), 3, {
-        y: "-=10",
-        x: "+=10",
-        rotation: "-=1",
-        ease: "Power1.easeInOut",
-      })
-      .to(q(".laptop"), 2, {
-        y: "+=10",
-        x: "-=10",
-        rotation: "-=1",
-        ease: "power1.easeInOut",
-      })
-      .to(q(".laptop"), 3, {
-        y: "-=10",
-        rotation: "+=1",
-        ease: "power1.easeInOut",
-      })
-      .to(q(".laptop"), 3, {
-        y: "+=10",
-        rotation: "+=1",
-        ease: "power1.easeInOut",
-      });
   }, [q]);
 
   const { t } = useTranslation('hero');
@@ -110,19 +82,11 @@ const HeroSection: React.FC = () => {
                 height={1374}
                 priority
                 id="character-illustration"
-                aria-label="Angel Tomas Concha Layme character illustration levitating with a Macbook"
+                aria-label="Angel Tomas Concha Layme character illustration levitating"
                 alt="Angel Tomas Concha Layme character illustration"
               />
             </div>
-            <div className="laptop absolute top-14 sm:top-16 left-0 scale-[.41] xs:scale-[.45] pointer-events-none">
-              <Image
-                src={laptop}
-                width={559}
-                height={386}
-                aria-hidden="true"
-                alt="Laptop illustration"
-              />
-            </div>
+
           </div>
         </div>
 
